@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+	<form action='./register.php' method='POST'>
+	<input type='hidden' name='supervisor' value='yo'>
+	<input type='text' name='user' placeholder='User ID'>
+	<input type='text' name='name' placeholder='Full Name'><br>
+	<input type='text' name='pass' placeholder='Password'>
+	<input type='text' name='q1' placeholder='Repeat Password'><br>
+	<textarea name='profile' placeholder='Profile' rows='5' cols='50'></textarea>
+	<br>Can this user:
+	<table>
+		<tr>
+			<td><input type='checkbox' name='pr1' value='1'> View users</td>
+			<td><input type='checkbox' name='pr2' value='1'> Modify users</td>
+			<td><input type='checkbox' name='pr3' value='1'> Delete users</td>
+		</tr>
+		<tr>
+			<td><input type='checkbox' name='pr4' value='1'> View groups</td>
+			<td><input type='checkbox' name='pr5' value='1'> Modify groups</td>
+			<td><input type='checkbox' name='pr6' value='1'> Delete groups</td>
+		</tr>
+		<tr>
+			<td><input type='checkbox' name='pr7' value='1'> View exams</td>
+			<td><input type='checkbox' name='pr8' value='1'> Modify exams</td>
+			<td><input type='checkbox' name='pr9' value='1'> Delete exams</td>
+		</tr>
+		<tr>
+			<td><input type='checkbox' name='pr10' value='1'> View students</td>
+			<td><input type='checkbox' name='pr11' value='1'> Modify students</td>
+			<td><input type='checkbox' name='pr12' value='1'> Delete students</td>
+	</table>
+	Do you wish to activate this user now?<br>
+	<input type='radio' name='status' value='1' checked> Yes<br>
+	<input type='radio' name='status' value='0'> No<br>
+	Is this a special user?<br>
+	<input type='radio' name='type' value='0' checked>No <br>
+	<input type='radio' name='type' value='1'>Profesor <br>
+	<input type='radio' name='type' value='2'>Admin <br>
+	<input type='radio' name='type' value='3'>Collaborator <br>
+	<input type='radio' name='type' value='4'>Other <br>
+	Do you wish to add a profile image?<br>
+	<input type='file' name='image'><br>
+	<input type='submit' value='Register User'>
+	</form>
+</body>
+</html>
