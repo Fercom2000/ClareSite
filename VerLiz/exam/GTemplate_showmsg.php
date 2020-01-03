@@ -8,13 +8,17 @@ $database   = 'dbFer';
 
 //$users=$_POST['user'];
 //$id=$_POST['id'];
-
-
+$page=1;
+if(isset($_GET['page'])) {
+   $page=$_GET['page'];
+}
+//echo $_GET['page']."<br>";
 try{
     $conn = new PDO("mysql:host=$host;dbname=$database", $user);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     
-    $sql="SELECT mensaje FROM `comentarios` WHERE id IN (69,70,71,72)";//id = 69 OR id=70 OR id=71 OR id=72 ";
+    $sql="SELECT mensaje FROM `msg` WHERE user='Pagina$page'";//id = 69 OR id=70 OR id=71 OR id=72 ";
+    //echo $sql;
     $stmt = $conn->prepare($sql);
     $stmt->execute();
 
