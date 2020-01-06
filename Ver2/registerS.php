@@ -5,6 +5,15 @@ function check($v){
 	}
 	return "";
 }
+function generateKey($length = 10) {
+    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $charactersLength = strlen($characters);
+    $randomString = '';
+    for ($i = 0; $i < $length; $i++) {
+        $randomString .= $characters[rand(0, $charactersLength - 1)];
+    }
+    return $randomString;
+}
 
 $user=htmlspecialchars(check('user'));
 $name=htmlspecialchars(check('name'));
@@ -41,11 +50,17 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "INSERT INTO user (userCode, userName, permissions,status,type,profile,addedBy,modifiedBy)
-VALUES ('$user','".$name."','".$per."','".$status."','".$type."','".$profile."','".$supervisor."','".$supervisor."')";
+$sql = "INSERT INTO student (studentCode, studentName, status,type,profile,enrolledBy,updatedBy)
+VALUES ('$user','".$name."','".$status."','".$type."','".$profile."','".$supervisor."','".$supervisor."')";
 
 if ($conn->query($sql) === TRUE) {
-    echo "New record created successfully";
+	$key=generateKey(5);
+	$sql2="INSERT INTO `img` (`idImg`, `name`, `ext`, `location`, `description`, `type`, `val`) VALUES (NULL, ENCODE('$pass','$key'), 'jpg', './$key/', 'Default user image, do not delete or modify', 'System image: student', '$user')"; //"INSERT INTO img (name,ext,location,description,type,val) VALUES ('ENCODE(\'$pass\','$key')','jpg','./$key/','Default user image, do not delete or modify','System image: student','$user')";
+	if ($conn->query($sql2) === TRUE) {
+    	echo "New record created successfully";
+    }else {
+	    echo "Error: " . $sql2 . "<br>" . $conn->error;
+	}
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }

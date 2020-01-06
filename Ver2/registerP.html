@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Register a new page</title>
+</head>
+<body>
+	<h1>Register a new page</h1>
+	<form action='./registerP.php' method='POST'>
+	<input type='hidden' name='supervisor' value='yo'>
+	<input type='text' name='pageCode' placeholder='Page ID'>
+	<input type='text' name='examCode' placeholder='Exam Code'><br>
+	<textarea name='description' placeholder='Description' rows='5' cols='50'></textarea>
+	Do you wish to activate this page now?<br>
+	<input type='radio' name='status' value='1' checked> Yes<br>
+	<input type='radio' name='status' value='0'> No<br>
+	What type of page is this?<br>
+	<input type='radio' name='type' value='0' checked>Chat <br>
+	<input type='radio' name='type' value='1'>Drag & Drop<br>
+	<input type='radio' name='type' value='2'>Pictogram <br>
+	<input type='radio' name='type' value='3'>Problem<br>
+	<input type='radio' name='type' value='4'>Other 
+	<input type='text' name='typeO'><br>
+	<input type='submit' value='Register User'>
+	</form>
+</body>
+</html>

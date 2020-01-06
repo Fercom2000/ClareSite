@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html>
-<head></head>
+<head>
+	<title>Register a new user</title>
+</head>
 <body>
-	<form action='./register.php' method='POST'>
+	<h1>Register a new user</h1>
+	<form action='./registerU.php' method='POST'>
 	<input type='hidden' name='supervisor' value='yo'>
 	<input type='text' name='user' placeholder='User ID'>
 	<input type='text' name='name' placeholder='Full Name'><br>
@@ -39,7 +42,8 @@
 	<input type='radio' name='type' value='1'>Profesor <br>
 	<input type='radio' name='type' value='2'>Admin <br>
 	<input type='radio' name='type' value='3'>Collaborator <br>
-	<input type='radio' name='type' value='4'>Other <br>
+	<input type='radio' name='type' value='4'>Other 
+	<input type='text' name='typeO'><br>
 	Do you wish to add a profile image?<br>
 	<input type='file' name='image'><br>
 	<input type='submit' value='Register User'>

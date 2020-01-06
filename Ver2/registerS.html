@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Register a new user</title>
+</head>
+<body>
+	<h1>Register a new user</h1>
+	<form action='./registerS.php' method='POST'>
+	<input type='hidden' name='supervisor' value='yo'>
+	<input type='text' name='user' placeholder='User ID'>
+	<input type='text' name='name' placeholder='Full Name'><br>
+	<input type='text' name='pass' placeholder='Password'>
+	<input type='text' name='q1' placeholder='Repeat Password'><br>
+	<textarea name='profile' placeholder='Profile' rows='5' cols='50'></textarea>
+	<br>Enrollement start date
+	<input type="date" name="sDate"><br>
+	Enrollement end date
+	<input type="date" name="eDate"><br>
+	Do you wish to activate this user now?<br>
+	<input type='radio' name='status' value='1' checked> Yes<br>
+	<input type='radio' name='status' value='0'> No<br>
+	What type of student?<br>
+	<input type='radio' name='type' value='0' checked>No <br>
+	<input type='radio' name='type' value='1'>Highschool <br>
+	<input type='radio' name='type' value='2'>Undergrad <br>
+	<input type='radio' name='type' value='3'>Grad <br>
+	<input type='radio' name='type' value='4'>Other 
+	<input type='text' name='typeO'><br>
+	Do you wish to add a profile image?<br>
+	<input type='file' name='image'><br>
+	<input type='submit' value='Register User'>
+	</form>
+</body>
+</html>
