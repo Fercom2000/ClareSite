@@ -38,10 +38,10 @@ $pr12=htmlspecialchars(check('pr12'));
 /*echo "User:".$user." Name:".$name." Permissions:7777 Pass:".$pass." Status:".$status." Type:".$type." Profile:".$profile." Supervisor:".$supervisor." ".$supervisor." ".$pr2;
 $per=7777;*/
 
-$servername = "localhost:3307";
+$servername = "34.89.49.45";
 $username = "root";
-$password = "";
-$dbname = "clare";
+$password = "Clare9021";
+$dbname = "csite_main";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -50,7 +50,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT * from student INNER JOIN img on student.studentCode=img.val;";
+$sql = "SELECT * from status";
 
 $result=$conn->query($sql); 
 $i=1;
@@ -59,54 +59,19 @@ if($result->num_rows>0) {
 		<table>
 		<tr>
 			<th></th>
-			<th>Student Id</th>
-			<th>Name</th>
-			<th>Status</th>
-			<th>Type</th>
-			<th>Term start date</th>
-			<th>Term end date</th>
-			<th>Profile</th>
-			<th>Enrolment date</th>
-			<th>Last record upadate</th>
-			<th>Last update by</th>
-			<th>Pass</th>
+			<th>Id</th>
+			<th>Status Code</th>
+			<th>Status Description</th>
 		</tr>
 	");
 	while ($row=$result->fetch_assoc()) {
-		$p=$row['name'];
-		$key=explode("/",$row['location']);
-		if(isset($key[1])){
-			$key=$key[1];
-		}else{
-			$key=NULL;
-		}
-		$id=$row['idImg'];
-		$sql2="SELECT DECODE('$p','$key') as p FROM img WHERE idImg=$id";
 		echo("
 			<tr>
 				<td>".$i."</td>
-				<td>".$row['studentCode']."</td>.
-				<td>".$row['studentName']."</td>.
-				<td>".$row['status']."</td>.
-				<td>".$row['type']."</td>.
-				<td>".$row['dateStart']."</td>.
-				<td>".$row['dateEnd']."</td>.
-				<td>".$row['profile']."</td>.
-				<td>".$row['dateEnrolment']."</td>.
-				<td>".$row['dateUpdated']."</td>.
-				<td>".$row['updatedBy']."</td>");
+				<td>".$row['idStatus']."</td>.
+				<td>".$row['code']."</td>.
+				<td>".$row['description']."</td>"."</tr>");
 		$i=$i+1;
-		//echo $sql2;
-		$conn2 = new mysqli($servername, $username, $password, $dbname);
-		$result2=$conn2->query($sql2); 
-		if($result2) {
-			$row2=$result2->fetch_assoc();
-			echo "<td>".$row2['p']."</td>";
-		}else{
-			echo "<td>"."Error: " . $sql2 . "<br>" . $conn2->error."</td>";
-		}
-		$conn2->close();
-		echo "</tr>";
 	}
 	echo "</table>";
 } else {
