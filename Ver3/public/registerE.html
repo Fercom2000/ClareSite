@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add a new element</title>
+</head>
+<body>
+	<h1>Add a new element</h1>
+	<form action='./registerE.php' method='POST'>
+	<input type='hidden' name='supervisor' value='yo'>
+	<input type='text' name='elementName' placeholder='Element ID'>
+	<input type='text' name='pageCode' placeholder='Page Code'><br>
+	<textarea name='htmlCode' placeholder='HTML Code' rows='5' cols='50'></textarea><br>
+	<textarea name='description' placeholder='Description' rows='5' cols='50'></textarea><br>
+	Do you wish to activate this page now?<br>
+	<input type='radio' name='status' value='1' checked> Yes<br>
+	<input type='radio' name='status' value='0'> No<br>
+	What type of element is this?<br>
+	<input type='radio' name='type' value='0' checked>Logo <br>
+	<input type='radio' name='type' value='1'>Page Title<br>
+	<input type='radio' name='type' value='2'>Reference Box <br>
+	<input type='radio' name='type' value='3'>Team Progress<br>
+	<input type='radio' name='type' value='4'>Help<br>
+	<input type='radio' name='type' value='5'>Next<br>
+	<input type='radio' name='type' value='6'>Chat Box Title/Instructions Title<br>
+	<input type='radio' name='type' value='7'>Chat Box Message<br>
+	<input type='radio' name='type' value='7'>Instructions<br>
+	<input type='radio' name='type' value='8'>Option Button Title Bar<br>
+	<input type='radio' name='type' value='9'>Option Button 1<br>
+	<input type='radio' name='type' value='10'>Option Button 2<br>
+	<input type='radio' name='type' value='11'>Option Button 3<br>
+	<input type='radio' name='type' value='12'>Side Image<br>
+	<input type='radio' name='type' value='13'>Side Option Button Title Bar<br>
+	<input type='radio' name='type' value='14'>Side Option Button 1<br>
+	<input type='radio' name='type' value='15'>Side Option Button 2<br>
+	<input type='radio' name='type' value='16'>Side Option Button 3<br>
+	<input type='radio' name='type' value='17'>Other 
+	<input type='text' name='typeO'><br>
+	<input type='submit' value='Register User'>
+	</form>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="./css/exam.css">
+	<meta charset="utf-8">
+</head>
+<body>
+	<div class="Banner">
+		<img class="Logo" id="Logo1" src="./gpx/UoS.png" alt="Arlice Skills">
+		<span class="ExamName">Arlice</span>
+	</div>
+	<div class="Nav">
+		<div class="Reference">
+			<div class="BTitle">Reference #</div>
+			dsv3423
+		</div>
+		<div class="Timer">
+			<div class="BTitle">Timer</div>
+			200 sec
+		</div>
+		<div class="Foward">-></div>
+		<div class="Back"><-</div>
+		<div class="Help">?</div>
+	</div>
+	<div class="ImageC" style="overflow: auto;">
+		<h1>ADD A NEW CHAT MESSAGE</h1>
+		<form action='./addMessage.php' method='POST'>
+			<input type='hidden' name='supervisor' value='yo'>
+			<input type='text' name='pageCode' value='page'>
+			<input type='text' name='id' value='msg'><br>
+			<input type='text' name='class' value='Message'>
+			<input type='text' name='img' value='./gpx/bandmember.jpg OR ./gpx/avatar_g2.jpg'><br>
+			<input type='text' name='time' placeholder ='1000'><br>
+			<textarea name="message" placeholder="Enter your Message" rows="5" cols="50"></textarea><br>
+			
+			<input type='submit' value='Add new message'>
+		</form>
+	</div>
+	<div class="Scenario">
+		<div class="BTitle">Close </div>
+		Is this a button?
+	</div>
+</body>
