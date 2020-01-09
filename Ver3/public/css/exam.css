@@ -58,9 +58,15 @@ html, body{
 	margin-right: auto;
 	width: 50vw;
 	min-width: 50vw;
-	height: 40vh;
+	height: 70vh;
 	text-align: center;
 	border: 1vh solid #193e72;	
+    position: fixed;
+    left: 25vw;
+    top: 20vh;
+    background-repeat:no-repeat;
+    background-size: contain;
+	background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url("../gpx/mex3.jpg");
 }
 .ImgC{
 	max-width: 100%;
@@ -73,7 +79,9 @@ html, body{
 	width: 50vw;
 	min-width: 50vw;
 	height: 20vh;
-	float: center;
+    position: fixed;
+    left: 25vw;
+    top: 65vh;
 	border: 1vh solid #193e72;
 }
 .BTitle{
@@ -226,4 +234,46 @@ html, body{
 .time-left {
   float: left;
   color: #999;
+}
+.Menu {
+    height: 8vh;
+    max-height: 8vh;
+    width: 100%;
+    overflow: hidden;
+    position: fixed;
+    left: 0vw;
+    top: 10vh;
+    color: #000F26;
+}
+ul.menuL {
+    overflow: hidden;
+    background-color: #193e72;
+    height: 100%;
+    padding-left: 2vw;
+    font-size: 3vh;
+    list-style-type: none;
+}
+li.menuL {
+    float: left;
+    height: 100%;
+    display: list-item;
+    text-align: -webkit-match-parent
+}
+.menuL {
+    font-size: 3vh;
+}
+.active {
+    background: #887CAF !important;
+}
+span.menuL {
+    line-height: 200%;
+}
+a.menuL {
+    display: block;
+    color: white;
+    text-align: center;
+    padding-right: 16px;
+    padding-left: 16px;
+    text-decoration: none;
+    height: 100%;
 }
