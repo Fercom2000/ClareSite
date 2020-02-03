@@ -1,0 +1,279 @@
+html, body{
+	background: transparent;
+	border: 0;
+	margin: 0;
+	padding: 0;
+	vertical-align: center;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;   
+	font-family: "Arial Narrow", Arial, "Helvetica Condensed", Helvetica, sans-serif;
+	font-size:16px;
+	width:100vw;
+	height:100vh;
+	font-family: "Libre Franklin", "Helvetica Neue", helvetica, arial, sans-serif;
+	font-weight: 400;
+	box-sizing: content-box;
+}
+.Banner{
+	width: 100vw;
+	height: 10vh;
+	border-bottom: 1vh dotted #193e72;
+}
+.Logo{
+	height: 8vh;
+	padding: 1vh;
+}
+.ExamName{
+	float: right;
+	font-size: 3.5vw;
+    text-align: center;
+    margin-right: 20px;
+    display: block;
+}
+.Nav{
+	width: 98vw;
+	height: 10vh;
+	padding: 1vh;
+}
+.Reference, .Timer, .Help, .Back, .Foward{
+	width: 10vw;
+	height: 8vh;
+	border: 1vh solid #193e72;
+	margin: 1vh;
+	float: left;
+	font-size: 1rem;
+	line-height: 1.5;
+}
+.Help, .Back, .Foward{
+	float: right;
+	line-height: 8vh;
+	text-align: center;
+	vertical-align: middle;
+}
+.ImageC{
+	margin: 2vh;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50vw;
+	min-width: 50vw;
+	height: 70vh;
+	text-align: center;
+	border: 1vh solid #193e72;	
+    position: fixed;
+    left: 25vw;
+    top: 20vh;
+    background-repeat:no-repeat;
+    background-size: contain;
+	background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url("../gpx/mex3.jpg");
+}
+.ImgC{
+	max-width: 100%;
+	max-height: 100%;
+}
+.Scenario{
+	margin: 2vh;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50vw;
+	min-width: 50vw;
+	height: 20vh;
+    position: fixed;
+    left: 25vw;
+    top: 65vh;
+	border: 1vh solid #193e72;
+}
+.BTitle{
+	width: 100%;
+	min-width: 100%;
+	border-bottom: .2vh dashed #193e72;	
+	text-align: center;
+	font-size: 1rem;
+	line-height: 1.5;
+}
+
+.Scenario2{
+	margin: 2vh;
+	border: 1vh solid #193e72;
+}
+.ImageC2{
+	margin: 2vh;	
+	text-align: center;
+	border: 1vh solid #193e72;	
+}
+.ProgBars{
+	border-bottom: .2vh dotted #193e72;	
+	height: 10vh;
+	max-height: 10vh;
+	font-size: 12px;
+	line-height: 1;
+}
+.GDot{
+  height: 15px;
+  width: 15px;
+  min-width: 15px;
+  min-height: 15px;
+  background-color: #00d478;
+  border-radius: 50%;
+  display: inline-block;
+}.ChatAct{
+	border-bottom: .2vh dotted #193e72;	
+
+}
+.Button{
+	background: #fff;
+	border: 2px;
+	color: black;
+	padding: 4px 0;
+	text-align: center;
+	text-decoration: none;
+	display: block;
+	margin: 4px 2px;
+	-webkit-transition-duration:0.4s;
+	transition-duration: 0.4s;
+	cursor: pointer;
+}
+.ButtonFloat{
+	display: inline-block;
+}
+.ButtonBar{
+	text-align: center;
+}
+.BG{
+	background: #4CAF50;
+	border: 2px;
+	color: #fff;	
+}
+.BG:hover{
+	background: #fff;
+	color: #4CAF50;
+	border: 1px solid #4CAF50;
+}
+.BR{
+	background: #f44336;
+	border: 2px;
+	color: #fff;	
+}
+.BR:hover{
+	background: #fff;
+	color: #f44336;
+	border: 1px solid #f44336;
+}
+.BP{
+	background: #6c1944;
+	border: 2px;
+	color: #fff;	
+}
+.BP:hover{
+	background: #fff;
+	color: #6c1944;
+	border: 1px solid #6c1944;
+
+}
+.BB{
+	background: #008CBA;
+	border: 2px;
+	color: #fff;	
+}
+.BB:hover{
+	background: #fff;
+	color: #008CBA;
+	border: 1px solid #008CBA;
+}
+.ChatRoom{
+	display: flex;
+	flex-direction: column-reverse;
+}
+.MessageBox{
+	height:40vh;
+	max-height: 40vh;
+	overflow: auto;
+}
+.Message {
+  border: 2px solid #dedede;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 12px;
+  line-height: 1;
+  display: none;
+}
+
+.darker {
+  border-color: #ccc;
+  background-color: #ddd;
+}
+
+.Message::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.Message img {
+  float: left;
+  max-width: 30px;
+  width: 100%;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+.Message img.right {
+  float: right;
+  margin-left: 20px;
+  margin-right:0;
+}
+
+.time-right {
+  float: right;
+  color: #aaa;
+}
+
+.time-left {
+  float: left;
+  color: #999;
+}
+.Menu {
+    height: 8vh;
+    max-height: 8vh;
+    width: 100%;
+    overflow: hidden;
+    position: fixed;
+    left: 0vw;
+    top: 10vh;
+    color: #000F26;
+}
+ul.menuL {
+    overflow: hidden;
+    background-color: #193e72;
+    height: 100%;
+    padding-left: 2vw;
+    font-size: 3vh;
+    list-style-type: none;
+}
+li.menuL {
+    float: left;
+    height: 100%;
+    display: list-item;
+    text-align: -webkit-match-parent
+}
+.menuL {
+    font-size: 3vh;
+}
+.active {
+    background: #887CAF !important;
+}
+span.menuL {
+    line-height: 200%;
+}
+a.menuL {
+    display: block;
+    color: white;
+    text-align: center;
+    padding-right: 16px;
+    padding-left: 16px;
+    text-decoration: none;
+    height: 100%;
+}
