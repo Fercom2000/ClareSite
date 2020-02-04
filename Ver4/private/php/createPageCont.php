@@ -24,8 +24,11 @@ if($page>0){
 		while ($row=$result->fetch_assoc()) {
 			echo ("<".$row['type']." class='".$row['class']."' name='".$row['elementName']."' id='".$row['eId']."' style='".$row['style']."' value='".$row['value'].".'>".$row['message']."</".$row['type'].">");
 		}
-	}else{
-	    echo "Error: " . $sql . "<br>" . $conn->error;
+	}else{		
+		if(!$conn->error){
+	    	echo "<br>";//Shows an empty content area
+	    }
+	    //echo "Error: " . $sql . "<br>" . $conn->error;
 	}
 	echo "</ul></form>";
 	$conn->close();

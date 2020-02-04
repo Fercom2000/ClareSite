@@ -1,5 +1,6 @@
 <?php
 //echo "<link rel='stylesheet' type='text/css' href='./css/exam.css'>";
+error_reporting(E_ALL & ~E_NOTICE);
 function check($v){
 	if(isset($_POST[$v])){
 	    return $_POST[$v];
@@ -12,7 +13,7 @@ function checkP($v){
 	}
 	return NULL;
 }
-$page=(int)htmlspecialchars(check('page'));
+$page=(int)htmlspecialchars(check('page'));//Check if there is a numeric internal page id
 
 if($page>0){
 	$servername = "localhost:3307";
@@ -36,7 +37,10 @@ if($page>0){
 			echo ("<".$row['type']." class='".$row['class']."' name='".$row['elementName']."' id='".$row['eId']."' style='".$row['style']."' value='".$row['value'].".'>".$row['message']."</".$row['type'].">");
 		}
 	}else{
-	    echo "Error: " . $sql . "<br>" . $conn->error;
+		if(!$conn->error){
+	    	echo "<br>";//Shows an empty nav bar
+	    }
+	    echo $conn->error;//Only for test mode, do not include in final version
 	}
 	echo "</ul></form>";
 	$conn->close();
