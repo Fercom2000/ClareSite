@@ -15,7 +15,7 @@ function checkP($v){
 $page=(int)htmlspecialchars(check('page'));
 
 if($page>0){
-	$servername = "localhost:3307";
+	$servername = "localhost:3306";
 	$username = "root";
 	$password = "";
 	$dbname = "clare";

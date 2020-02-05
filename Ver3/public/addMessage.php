@@ -40,7 +40,7 @@ $code='<div class="'.$class.'" id="'.$id.'" name="'.$id.'">
 /*echo "User:".$user." Name:".$name." Permissions:7777 Pass:".$pass." Status:".$status." Type:".$type." Profile:".$profile." Supervisor:".$supervisor." ".$supervisor." ".$pr2;
 $per=7777;*/
 
-$servername = "localhost:3307";
+$servername = "localhost:3306";
 $username = "root";
 $password = "";
 $dbname = "clare";

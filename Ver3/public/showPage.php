@@ -44,7 +44,7 @@
 					return "";
 				}
 				$pC=htmlspecialchars(checkGET('pageId'));
-				$servername = "localhost:3307";
+				$servername = "localhost:3306";
 				$username = "root";
 				$password = "";
 				$dbname = "clare";
@@ -55,7 +55,7 @@
 				if ($conn->connect_error) {
 				    die("Connection failed: " . $conn->connect_error);
 				}
-				$sql="SELECT * FROM element WHERE pageCode='$pC' AND description='Chat Message'";
+				$sql="SELECT * FROM element WHERE pageCode='$pC' AND description='Chat Message' ORDER BY timeD";
 				$result=$conn->query($sql); 
 				$i=1;
 				if($result->num_rows>0) {
